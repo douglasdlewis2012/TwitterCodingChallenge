@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="weather"
+            type="com.twitter.challenge.model.TwitterWeatherModel"/>
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/darker_gray"
+            android:src="@drawable/sunnycardicon"/>
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:text="@{weather.name}"
+            android:textAlignment="center"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorAccent"
+            android:text="@{Double.toString(weather.wind.speed)}"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            />
+
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/holo_green_dark"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="25sp"
+            tools:text="14 °C / 39 °F"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="start"
+                android:layout_weight=".5"
+                android:background="@android:color/holo_red_light"
+                android:onClick="setupStandardDev"
+                android:text="@string/press_here"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/standard_deviation"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_weight=".5"
+                android:background="@android:color/holo_orange_light"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</layout>

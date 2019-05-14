@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tweather</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="press_here">Press Here</string>
+</resources>
