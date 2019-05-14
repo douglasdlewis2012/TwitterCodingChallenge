@@ -14,7 +14,7 @@ class Helper {
          * @return Temperature in Fahrenheit.
          */
         fun celsiusToFahrenheit(temperatureInCelsius: Float): Float {
-            return temperatureInCelsius * 1.8f + 32
+            return Math.floor(temperatureInCelsius * 1.8 + 32).toFloat()
         }
 
         /**
